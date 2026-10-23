@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="NYAPPT — Not Your Average Apology Presentation. A little program, a sincere apology.">
+<meta name="theme-color" content="#050806">
+<title>NYAPPT</title>
+</head>
+<body data-theme="term">
+<div id="fx" aria-hidden="true"></div>
+<div class="scan" aria-hidden="true"></div>
+<header class="hud">
+  <span id="prog">01/05</span>
+  <button id="skip" class="mini" aria-label="Lewati animasi (Esc)">SKIP ▸</button>
+  <button id="mute" class="mini" aria-label="Nyalakan atau matikan musik" aria-pressed="false">SOUND: ON</button>
+</header>
+<main id="app">
+  <section class="scene active" id="s1" aria-label="Initialization">
+    <div class="term">
+      <div class="bar"><i></i><i></i><i></i><b>NYAPPT_TERMINAL v1.0</b></div>
+      <div class="log" id="l1"></div>
+      <div class="pb" id="pb"><span class="track"><span id="pbf"></span></span><em id="pbt">0%</em></div>
+      <p class="msg ln" id="m1"></p>
+      <div class="acts"><button class="btn" id="b1" data-c="ui.b1"></button></div>
+    </div>
+  </section>
+  <section class="scene" id="s2" aria-label="Error detected">
+    <div class="term">
+      <div class="bar"><i></i><i></i><i></i><b>NYAPPT_TERMINAL v1.0</b></div>
+      <div class="log" id="l2"></div>
+      <p class="msg ln" id="m2"></p>
+      <div class="acts"><button class="btn" id="b2" data-c="ui.b2"></button></div>
+    </div>
+  </section>
+  <section class="scene" id="s3" aria-label="Debugging the self">
+    <div class="calm"><div class="story"></div>
+      <div class="acts"><button class="btn" id="b3"></button></div></div>
+  </section>
+  <section class="scene" id="s4" aria-label="Beyond the code">
+    <svg class="net" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true" fill="none" stroke="#E7C98A" stroke-width=".6">
+      <path pathLength="1" d="M20 80 L120 140 L210 90 L320 170 L380 110"/><path pathLength="1" d="M60 330 L150 260 L240 300 L330 230 L390 290"/><path pathLength="1" d="M120 140 L150 260 M210 90 L240 300 M320 170 L330 230"/>
+      <circle cx="120" cy="140" r="2.5" fill="#E7C98A"/><circle cx="210" cy="90" r="2.5" fill="#E7C98A"/><circle cx="320" cy="170" r="2.5" fill="#E7C98A"/><circle cx="150" cy="260" r="2.5" fill="#E7C98A"/><circle cx="240" cy="300" r="2.5" fill="#E7C98A"/><circle cx="330" cy="230" r="2.5" fill="#E7C98A"/>
+    </svg>
+    <div class="calm">
+      <div class="words" aria-hidden="true"><span class="w" style="left:2%;top:0" data-c="s4.words.0"></span><span class="w" style="right:4%;top:20px" data-c="s4.words.1"></span><span class="w" style="left:30%;top:50px" data-c="s4.words.2"></span><span class="w" style="left:0;top:90px" data-c="s4.words.3"></span><span class="w" style="right:0;top:100px" data-c="s4.words.4"></span></div>
+      <div class="story"></div>
+      <div class="acts"><button class="btn" id="b4" data-c="ui.b4"></button></div>
+    </div>
+  </section>
+  <section class="scene" id="s5" aria-label="Final decision">
+    <div class="calm">
+      <div id="pr"><div class="pl"></div>
+        <div class="acts" id="a5"><button class="btn" id="open" data-c="ui.open"></button><button class="btn" id="notyet" data-c="ui.notyet"></button></div></div>
+      <div id="ny" class="gone"><p class="ln" data-c="s5.noRush"></p>
+        <div class="acts"><button class="btn" id="ready" data-c="ui.ready"></button><button class="btn" id="back" data-c="ui.back"></button></div></div>
+      <div id="letter" class="gone">
+        <article class="card"><div id="lbody"></div>
+          <div id="fin"><p class="done" data-c="s5.done"></p><p class="quote" data-c="s5.quote"></p><div class="acts"><button class="btn" id="close" data-c="ui.close"></button></div></div>
+        </article>
+        <div class="acts"><button class="btn" id="skipL" data-c="ui.skipL"></button></div>
+      </div>
+      <div id="end" class="gone"><p class="story ln" data-c="s5.thanks"></p>
+        <div class="acts" id="aEnd"><button class="btn" id="replay" data-c="ui.replay"></button></div></div>
+    </div>
+  </section>
+</main>
+<div id="fatal" class="gone" role="alert"><p>Ups, ada yang error. Tenang, kita ulang dari awal ya.</p><button class="btn" id="fatalBtn">[ REPLAY EXPERIENCE ]</button></div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
